@@ -1,0 +1,50 @@
+USE world;
+
+SELECT * FROM CITY LIMIT 10;
+
+SELECT 
+	Name,
+	COUNT(*) AS cantidad_duplicados
+FROM CITY
+GROUP BY Name
+HAVING COUNT(*)>1;
+
+SELECT *
+FROM CITY
+WHERE Name='Ede';
+
+SELECT 
+	ID,
+	COUNT(*) AS cantidad_duplicados
+FROM CITY
+GROUP BY ID
+HAVING COUNT(*)>1;
+
+SELECT * FROM COUNTRY LIMIT 10;
+
+SELECT 
+	Code,
+	COUNT(*) AS cantidad_duplicados
+FROM COUNTRY
+GROUP BY Code
+HAVING COUNT(*)>1;
+
+SELECT 
+	Name,
+	COUNT(*) AS cantidad_duplicados
+FROM COUNTRY
+GROUP BY Name
+HAVING COUNT(*)>1;
+
+SELECT * FROM COUNTRYLANGUAGE;
+
+SELECT 
+	Language,
+	COUNT(*) AS cantidad_duplicados
+FROM COUNTRYLANGUAGE
+GROUP BY Language
+HAVING COUNT(*)>1;
+
+SELECT *
+FROM COUNTRYLANGUAGE
+WHERE Language ='Dutch';
